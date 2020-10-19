@@ -1,1 +1,0 @@
-# OTUS_QA_HW
