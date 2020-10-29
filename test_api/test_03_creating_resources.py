@@ -10,6 +10,6 @@ def test_creating_a_resource(create_session, workplace, todos_id):
 
     assert response.status_code == TestData.STATUS_CODE_201
     assert j_res['id'] == todos_id + 1
-    assert j_res['userId'] == 1
-    assert j_res['title'] == TestData.TITLE
-    assert j_res['completed'] is False
+    assert j_res['userId'] == TestData.DICT_UNIT_1['userId']
+    assert j_res['title'] == TestData.DICT_UNIT_1['title']
+    assert j_res['completed'] is TestData.DICT_UNIT_1['completed']

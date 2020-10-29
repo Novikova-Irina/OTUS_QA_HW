@@ -15,9 +15,6 @@ def test_get_todos(create_session, workplace):
     assert_valid_schema(res.json(), SchemasConsts.PATH_TO_SCHEMA)
 
 
-@pytest.mark.parametrize('schema', [
-    SchemasConsts.PATH_TO_SCHEMA_FILE
-])
-def test_get_todoses(create_session, workplace, schema):
+def test_get_todoses(create_session, workplace):
     res = create_session.get(url=workplace)
-    assert_valid_schema(res.json(), schema)
+    assert_valid_schema(res.json(), SchemasConsts.PATH_TO_SCHEMA_FILE)
