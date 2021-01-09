@@ -1,19 +1,6 @@
-import random
 from datetime import datetime
 
 import pytest
-
-
-@pytest.fixture
-def fixture_return_rnd_number():
-    return random.randint(1, 100)
-
-
-@pytest.fixture
-def fixture_get_random_digit(fixture_return_rnd_number):
-    range_start = fixture_return_rnd_number
-    range_end = fixture_return_rnd_number + 10
-    return random.randint(range_start, range_end)
 
 
 @pytest.fixture(scope='session', autouse=True)
